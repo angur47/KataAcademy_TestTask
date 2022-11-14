@@ -116,6 +116,14 @@ public class Main {
                 solution = a * b;
                 break;
             case "/":
+                if (b==0) {
+                    try {
+                        throw new Exception();
+                    } catch (Exception e) {
+                        System.out.println("На 0 делить нельзя.");
+                        return errorResponse;
+                    }
+                }
                 solution = a / b;
                 break;
         }
